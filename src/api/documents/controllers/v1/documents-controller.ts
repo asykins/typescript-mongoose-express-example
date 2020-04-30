@@ -17,7 +17,6 @@ export class DocumentsController extends ApiController
     }
     
     public async getById(request: Request, response: Response) {
-        console.log(request.url);
         DocumentModel.findById(mongoose.Types.ObjectId(request.params.id))
                      .exec().then(doc => {
                         if(!doc){
