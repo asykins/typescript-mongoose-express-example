@@ -12,6 +12,8 @@
 	  "noImplicitAny": true,
 	  "esModuleInterop": true,
 	  "resolveJsonModule": true,
-	  "inlineSourceMap": true
+	  "inlineSourceMap": true,
+	  "experimentalDecorators": true,
+	  "emitDecoratorMetadata": true
 	}
   }

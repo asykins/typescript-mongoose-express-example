@@ -5,9 +5,8 @@ import DocumentModel from "../../../../mongoose/models/document-model"
 
 export class DocumentsController extends ApiController
 {
-    defaultRoute: string = "/api/document";
-    constructor()
-    {
+    defaultRoute: string = "/api/v1.0.0/document";
+    constructor() {
         super();
         this.initRoutes();
     }
@@ -18,6 +17,7 @@ export class DocumentsController extends ApiController
     }
     
     public async getById(request: Request, response: Response) {
+        console.log(request.url);
         DocumentModel.findById(mongoose.Types.ObjectId(request.params.id))
                      .exec().then(doc => {
                         if(!doc){

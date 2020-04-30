@@ -1,6 +1,6 @@
 import { ApiInit } from "./api-init";
 import mongoose, { mongo } from "mongoose";
-import express, { Application } from "express";
+import express, { Application, Request, Response, response } from "express";
 import { ApiController } from "./abstracts/api-controller";
 
 export class Api 
@@ -44,6 +44,8 @@ export class Api
             this.listen();
         }
     }
+
+
 
     private listen(): void {
         this.app.listen(this.port, () => {
