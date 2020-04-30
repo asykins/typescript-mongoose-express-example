@@ -1,0 +1,32 @@
+{
+  "name": "express-mongoose-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc.cmd && node ./dist/app.js",
+    "start:watch": "tsc.cmd && nodemon ./dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/node": "^13.13.4",
+    "typescript": "^3.8.3",
+    "@types/cors": "^2.8.6",
+    "@types/mongoose": "^5.7.14"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10",
+    "nodemon": "^2.0.3"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts"
+  }
+}
