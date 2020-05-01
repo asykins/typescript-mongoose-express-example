@@ -12,8 +12,8 @@ const app = new Api({
             {
                 acceptedVersionHeaders: ["accept-header", "X-Version"],
                 defaultVersion: "1.0.0",
-                regex: /^v[0-9]+\.[0-9]+\.[0-9]+$/,
-                template: "/api/{version}",
+                versionValidationRegex: /^v[0-9]+\.[0-9]+\.[0-9]+$/,
+                apiTemplate: "/api/{version}",
                 supportedVersions: ["1.0.0"] 
             }) 
     ],
